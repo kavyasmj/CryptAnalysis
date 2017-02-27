@@ -1,0 +1,173 @@
+
+Documentation for Cypto Assignment 3
+=====================================
+AUTHOR
+Name  : Kavyashree Mysore Jagadeesh
+USC ID: 3554137619
+Email : mysoreja@usc.edu
+
+The purpose of this assignment is to get familiar with a classical polyalphabetic substitution cipher and the cryptanalysis of it.
+The commandline syntax for hw3 is as follows:
+    hw3 keygen -p=pphrase -t=period
+    hw3 crypt -k=keyfile [file]
+    hw3 invkey keyfile
+    hw3 histo -t=period -i=which [file]
+    hw3 solve -l=max_t file
+
+COMMANDS
+Keygen:
+Outputs a keyfile for given period and pphrase. Enter period for -t option. Ente
+r non empty ASCII string passphrase for -p option.
+
+Crypt:
+Encrypts (or decrypts) an input ASCII text file or input from console/terminal(s
+tdin) with the keys specified in keyfile. The output is an ASCII text file encry
+pted (or decrypted) using a full Vigen\303\250re cipher (with polyalphabetic sub
+stitution). Enter keyfile recieved by keygen for -k option.
+
+Invkey:
+Creates an inverse permutation key file from given input keyfile.
+
+Histo:
+Produces a histogram of ciphertext character frequencies assuming the ciphertext
+ is produced by a polyalphabetic substitution cipher with period equals period w
+hich specifies a one-based index for the alphabets. The output is sorted accordi
+ng to the frequencies of the ciphertext characters in descending order. Does not
+ consider any characters that is not a lowercase English character (i.e., betwee
+n 'a' and 'z', inclusive). Enter period for -t option. Enter character number fo
+r -i option. Input file can be specified or input will be taken from console/ter
+minal(stdin).
+
+Solve:
+Applies the Method of Kasiski and uses Index of Coincidence in order to determin
+e the period of an input ciphertext encrypted by a full Vigen\303\250re cipher (
+with polyalphabetic substitution).
+Enter max_t for -t option.
+
+
+BUILD
+Comments:
+"make" - to compile
+"make clean" - to clear executable files
+
+TEST:
+set len1=11
+set len2=7
+set len3=23
+set len4=54
+set len5=101
+
+set pph1="apple"
+set pph2="facebook"
+set pph3="google"
+set pph4="microsoft"
+set pph5="twitter"
+
+(A) keygen 
+		set srcdir=test
+		/bin/rm -f f?.keys
+
+		./hw3 keygen -p=$pph1 -t=$len1 > f1.keys
+		./hw3 keygen -p=$pph2 -t=$len2 > f2.keys
+		./hw3 keygen -p=$pph3 -t=$len3 > f3.keys
+		./hw3 keygen -p=$pph4 -t=$len4 > f4.keys
+		./hw3 keygen -p=$pph5 -t=$len5 > f5.keys
+
+		foreach f (1 2 3 4 5)
+			echo "==> $srcdir/f$f.keys"
+                        diff f$f.keys $srcdir/f$f.keys
+		end
+
+(B) invkey 
+		set srcdir=test
+		/bin/rm -f f?.invkeys
+		foreach f (1 2 3 4 5)
+			./hw3 invkey $srcdir/f$f.keys > f$f.invkeys
+			echo "==> $srcdir/f$f.invkeys"
+			diff f$f.invkeys $srcdir/f$f.invkeys
+		end
+
+(C) crypt/decrypt 
+		set srcdir=test
+
+	1. crypt 
+                /bin/rm -f f?.ct
+                foreach f (1 2 3 4 5)
+                        ./hw3 crypt -k=$srcdir/f$f.keys $srcdir/f$f.pt > f$f.ct
+                        echo "==> $srcdir/f$f.ct"
+                        diff f$f.ct $srcdir/f$f.ct
+                end
+
+	2. decrypt 
+                /bin/rm -f f?.pt
+                foreach f (1 2 3 4 5)
+                        cat $srcdir/f$f.ct | ./hw3 crypt -k=$srcdir/f$f.invkeys > f$f.pt
+                        echo "==> $srcdir/f$f.pt"
+                        diff f$f.pt $srcdir/f$f.pt
+                end
+
+(D) keygen, invkey, crypt, then decrypt 
+
+        set srcdir=test
+		/bin/rm -f f?.pt f?.ct f?.keys f?.invkeys
+
+		./hw3 keygen -p=$pph1 -t=3 > f1.keys
+		./hw3 keygen -p=$pph2 -t=7 > f2.keys
+		./hw3 keygen -p=$pph3 -t=8 > f3.keys
+		./hw3 keygen -p=$pph4 -t=2 > f4.keys
+		./hw3 keygen -p=$pph5 -t=4 > f5.keys
+
+                foreach f (1 2 3 4 5)
+			./hw3 invkey f$f.keys > f$f.invkeys
+                        cat $srcdir/f$f.pt | ./hw3 crypt -k=f$f.keys > f$f.ct
+                        ./hw3 crypt -k=f$f.invkeys f$f.ct > f$f.pt
+                        echo "==> $srcdir/f$f.pt"
+                        diff f$f.pt $srcdir/f$f.pt
+                end
+
+(E) histo
+
+        set srcdir=test
+        /bin/rm -f f?.histo.?
+
+        ./hw3 histo -t=5 -i=1 $srcdir/f1.ct > f1.histo.1
+        ./hw3 histo -t=6 -i=3 $srcdir/f2.ct > f2.histo.1
+        ./hw3 histo -t=3 -i=3 $srcdir/f3.ct > f3.histo.1
+        ./hw3 histo -t=4 -i=2 $srcdir/f4.ct > f4.histo.1
+        ./hw3 histo -t=7 -i=2 $srcdir/f5.ct > f5.histo.1
+
+        cat $srcdir/f1.ct | ./hw3 histo -t=7 -i=7 > f1.histo.2
+        cat $srcdir/f2.ct | ./hw3 histo -t=8 -i=5 > f2.histo.2
+        cat $srcdir/f3.ct | ./hw3 histo -t=4 -i=4 > f3.histo.2
+        cat $srcdir/f4.ct | ./hw3 histo -t=5 -i=3 > f4.histo.2
+        cat $srcdir/f5.ct | ./hw3 histo -t=6 -i=1 > f5.histo.2
+
+	foreach f (1 2 3 4 5)
+		foreach x (1 2)
+			echo "==> $srcdir/f$f.histo.$x "
+			diff $srcdir/f$f.histo.$x f$f.histo.$x
+		end
+	end
+
+(F) solve 
+
+	Note: For the floating values (IC and E(IC) in f?.solve, the numbers
+              do not have to match exactly; they just have to be close
+              (i.e., first 5 significant digits must be the same, after
+              rounding to first 5 significant digits).
+
+        set srcdir=test
+        /bin/rm -f f?.solve
+
+        ./hw3 solve -l=17 $srcdir/f1.ct > f1.solve
+        ./hw3 solve -l=20 $srcdir/f2.ct > f2.solve
+        ./hw3 solve -l=9  $srcdir/f3.ct > f3.solve
+        ./hw3 solve -l=11 $srcdir/f4.ct > f4.solve
+        ./hw3 solve -l=16 $srcdir/f5.ct > f5.solve
+
+        foreach f (1 2 3 4 5)
+                echo "==> $srcdir/f$f.solve"
+                diff f$f.solve $srcdir/f$f.solve
+        end
+
+

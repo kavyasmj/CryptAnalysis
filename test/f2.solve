@@ -1,0 +1,129 @@
+Kasiski Method
+==============
+len=4, i=84, j=140, j-i=56, avut
+len=4, i=84, j=1218, j-i=1134, avut
+len=4, i=116, j=592, j-i=476, hogb
+len=4, i=117, j=593, j-i=476, ogbk
+len=4, i=118, j=594, j-i=476, gbkm
+len=4, i=119, j=595, j-i=476, bkmr
+len=4, i=120, j=596, j-i=476, kmra
+len=4, i=140, j=1218, j-i=1078, avut
+len=4, i=165, j=1054, j-i=889, eity
+len=4, i=228, j=508, j-i=280, aipj
+len=4, i=229, j=509, j-i=280, ipjh
+len=4, i=229, j=908, j-i=679, ipjh
+len=4, i=234, j=395, j-i=161, rsqq
+len=4, i=234, j=1158, j-i=924, rsqq
+len=4, i=254, j=478, j-i=224, xqfs
+len=4, i=255, j=479, j-i=224, qfsa
+len=4, i=256, j=480, j-i=224, fsag
+len=4, i=286, j=720, j-i=434, jarz
+len=4, i=347, j=473, j-i=126, ftja
+len=4, i=347, j=1299, j-i=952, ftja
+len=4, i=387, j=1150, j-i=763, pprw
+len=4, i=387, j=1311, j-i=924, pprw
+len=4, i=395, j=1158, j-i=763, rsqq
+len=4, i=446, j=831, j-i=385, ttxr
+len=4, i=473, j=1299, j-i=826, ftja
+len=4, i=509, j=908, j-i=399, ipjh
+len=4, i=636, j=1329, j-i=693, potq
+len=4, i=682, j=1123, j-i=441, oaqg
+len=4, i=819, j=861, j-i=42, iimr
+len=4, i=866, j=964, j-i=98, ipjq
+len=4, i=875, j=980, j-i=105, srce
+len=4, i=985, j=1279, j-i=294, tjnr
+len=4, i=1044, j=1233, j-i=189, ijna
+len=4, i=1099, j=1225, j-i=126, aimr
+len=4, i=1099, j=1253, j-i=154, aimr
+len=4, i=1150, j=1311, j-i=161, pprw
+len=4, i=1225, j=1253, j-i=28, aimr
+len=5, i=116, j=592, j-i=476, hogbk
+len=5, i=117, j=593, j-i=476, ogbkm
+len=5, i=118, j=594, j-i=476, gbkmr
+len=5, i=119, j=595, j-i=476, bkmra
+len=5, i=228, j=508, j-i=280, aipjh
+len=5, i=254, j=478, j-i=224, xqfsa
+len=5, i=255, j=479, j-i=224, qfsag
+len=6, i=116, j=592, j-i=476, hogbkm
+len=6, i=117, j=593, j-i=476, ogbkmr
+len=6, i=118, j=594, j-i=476, gbkmra
+len=6, i=254, j=478, j-i=224, xqfsag
+len=7, i=116, j=592, j-i=476, hogbkmr
+len=7, i=117, j=593, j-i=476, ogbkmra
+len=8, i=116, j=592, j-i=476, hogbkmra
+len=9, no more matches
+
+Average Index of Coincidence
+============================
+L=1149
+f('a')=68
+f('b')=49
+f('c')=39
+f('d')=26
+f('e')=47
+f('f')=42
+f('g')=50
+f('h')=37
+f('i')=46
+f('j')=91
+f('k')=22
+f('l')=19
+f('m')=47
+f('n')=53
+f('o')=54
+f('p')=57
+f('q')=49
+f('r')=65
+f('s')=36
+f('t')=65
+f('u')=38
+f('v')=23
+f('w')=34
+f('x')=37
+f('y')=32
+f('z')=23
+IC=0.042862601
+t=1, E(IC)=0.0658
+t=2, E(IC)=0.052118862
+t=3, E(IC)=0.047558483
+t=4, E(IC)=0.045278293
+t=5, E(IC)=0.04391018
+t=6, E(IC)=0.042998104
+t=7, E(IC)=0.042346621
+t=8, E(IC)=0.041858009
+t=9, E(IC)=0.041477977
+t=10, E(IC)=0.041173952
+t=11, E(IC)=0.040925204
+t=12, E(IC)=0.040717914
+t=13, E(IC)=0.040542515
+t=14, E(IC)=0.040392173
+t=15, E(IC)=0.040261876
+t=16, E(IC)=0.040147867
+t=17, E(IC)=0.04004727
+t=18, E(IC)=0.039957851
+t=19, E(IC)=0.039877844
+t=20, E(IC)=0.039805838
+
+Auto-correlation Method
+=======================
+t=1, count=35
+t=2, count=22
+t=3, count=32
+t=4, count=39
+t=5, count=29
+t=6, count=40
+t=7, count=70
+t=8, count=39
+t=9, count=26
+t=10, count=33
+t=11, count=40
+t=12, count=34
+t=13, count=25
+t=14, count=66
+t=15, count=35
+t=16, count=35
+t=17, count=34
+t=18, count=39
+t=19, count=26
+t=20, count=37
+

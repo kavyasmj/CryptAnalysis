@@ -1,0 +1,285 @@
+Kasiski Method
+==============
+len=4, i=4, j=50, j-i=46, qzlc
+len=4, i=278, j=5476, j-i=5198, lodi
+len=4, i=293, j=5836, j-i=5543, tpqk
+len=4, i=294, j=5837, j-i=5543, pqke
+len=4, i=295, j=5838, j-i=5543, qkez
+len=4, i=296, j=5839, j-i=5543, kezf
+len=4, i=453, j=6157, j-i=5704, jlpj
+len=4, i=872, j=2988, j-i=2116, coiw
+len=4, i=873, j=2989, j-i=2116, oiww
+len=4, i=874, j=2990, j-i=2116, iwwz
+len=4, i=875, j=2991, j-i=2116, wwzm
+len=4, i=880, j=3387, j-i=2507, qpjf
+len=4, i=881, j=3388, j-i=2507, pjfj
+len=4, i=882, j=3389, j-i=2507, jfjo
+len=4, i=883, j=3390, j-i=2507, fjon
+len=4, i=884, j=3391, j-i=2507, jonk
+len=4, i=972, j=1777, j-i=805, joxg
+len=4, i=972, j=1892, j-i=920, joxg
+len=4, i=972, j=2674, j-i=1702, joxg
+len=4, i=1000, j=1207, j-i=207, nudo
+len=4, i=1000, j=1989, j-i=989, nudo
+len=4, i=1000, j=2403, j-i=1403, nudo
+len=4, i=1000, j=4013, j-i=3013, nudo
+len=4, i=1000, j=5209, j-i=4209, nudo
+len=4, i=1006, j=5215, j-i=4209, whzg
+len=4, i=1007, j=5216, j-i=4209, hzgv
+len=4, i=1008, j=5217, j-i=4209, zgvd
+len=4, i=1013, j=5222, j-i=4209, fsyy
+len=4, i=1014, j=5223, j-i=4209, syyj
+len=4, i=1108, j=2649, j-i=1541, einq
+len=4, i=1108, j=3477, j-i=2369, einq
+len=4, i=1108, j=4351, j-i=3243, einq
+len=4, i=1108, j=5064, j-i=3956, einq
+len=4, i=1108, j=5179, j-i=4071, einq
+len=4, i=1108, j=5317, j-i=4209, einq
+len=4, i=1135, j=3274, j-i=2139, bzgr
+len=4, i=1135, j=4217, j-i=3082, bzgr
+len=4, i=1207, j=1989, j-i=782, nudo
+len=4, i=1207, j=2403, j-i=1196, nudo
+len=4, i=1207, j=4013, j-i=2806, nudo
+len=4, i=1207, j=5209, j-i=4002, nudo
+len=4, i=1235, j=5605, j-i=4370, iqbq
+len=4, i=1281, j=1925, j-i=644, krdn
+len=4, i=1354, j=3194, j-i=1840, qesw
+len=4, i=1354, j=3769, j-i=2415, qesw
+len=4, i=1387, j=2376, j-i=989, dfks
+len=4, i=1432, j=5710, j-i=4278, afno
+len=4, i=1494, j=2253, j-i=759, kipe
+len=4, i=1494, j=2782, j-i=1288, kipe
+len=4, i=1494, j=4484, j-i=2990, kipe
+len=4, i=1554, j=5625, j-i=4071, rgpl
+len=4, i=1563, j=4990, j-i=3427, oihy
+len=4, i=1596, j=3643, j-i=2047, syej
+len=4, i=1596, j=5414, j-i=3818, syej
+len=4, i=1596, j=5920, j-i=4324, syej
+len=4, i=1624, j=2751, j-i=1127, utgk
+len=4, i=1624, j=3510, j-i=1886, utgk
+len=4, i=1707, j=5801, j-i=4094, mahk
+len=4, i=1708, j=5802, j-i=4094, ahkk
+len=4, i=1709, j=5803, j-i=4094, hkky
+len=4, i=1710, j=5804, j-i=4094, kkyf
+len=4, i=1749, j=4509, j-i=2760, zpin
+len=4, i=1777, j=1892, j-i=115, joxg
+len=4, i=1777, j=2674, j-i=897, joxg
+len=4, i=1831, j=2567, j-i=736, degs
+len=4, i=1892, j=2674, j-i=782, joxg
+len=4, i=1957, j=4740, j-i=2783, hnlm
+len=4, i=1989, j=2403, j-i=414, nudo
+len=4, i=1989, j=4013, j-i=2024, nudo
+len=4, i=1989, j=5209, j-i=3220, nudo
+len=4, i=2080, j=3943, j-i=1863, ydom
+len=4, i=2081, j=3944, j-i=1863, domf
+len=4, i=2082, j=3945, j-i=1863, omfu
+len=4, i=2142, j=2947, j-i=805, tzzc
+len=4, i=2142, j=3890, j-i=1748, tzzc
+len=4, i=2142, j=4695, j-i=2553, tzzc
+len=4, i=2142, j=4925, j-i=2783, tzzc
+len=4, i=2178, j=2707, j-i=529, qtbe
+len=4, i=2178, j=3420, j-i=1242, qtbe
+len=4, i=2195, j=3115, j-i=920, vsou
+len=4, i=2196, j=3116, j-i=920, souf
+len=4, i=2197, j=3117, j-i=920, ouft
+len=4, i=2198, j=3118, j-i=920, uftm
+len=4, i=2217, j=4540, j-i=2323, pwgw
+len=4, i=2217, j=4563, j-i=2346, pwgw
+len=4, i=2218, j=2425, j-i=207, wgwq
+len=4, i=2218, j=4541, j-i=2323, wgwq
+len=4, i=2218, j=4564, j-i=2346, wgwq
+len=4, i=2253, j=2782, j-i=529, kipe
+len=4, i=2253, j=4484, j-i=2231, kipe
+len=4, i=2264, j=4764, j-i=2500, rdug
+len=4, i=2279, j=3061, j-i=782, qulo
+len=4, i=2279, j=5568, j-i=3289, qulo
+len=4, i=2338, j=3534, j-i=1196, kerp
+len=4, i=2403, j=4013, j-i=1610, nudo
+len=4, i=2403, j=5209, j-i=2806, nudo
+len=4, i=2425, j=4541, j-i=2116, wgwq
+len=4, i=2425, j=4564, j-i=2139, wgwq
+len=4, i=2444, j=3916, j-i=1472, vehe
+len=4, i=2461, j=6003, j-i=3542, wppy
+len=4, i=2462, j=6004, j-i=3542, ppys
+len=4, i=2463, j=6005, j-i=3542, pysy
+len=4, i=2464, j=6006, j-i=3542, ysyg
+len=4, i=2465, j=6007, j-i=3542, sygk
+len=4, i=2466, j=6008, j-i=3542, ygkh
+len=4, i=2472, j=5324, j-i=2852, deka
+len=4, i=2528, j=3747, j-i=1219, qjhd
+len=4, i=2649, j=3477, j-i=828, einq
+len=4, i=2649, j=4351, j-i=1702, einq
+len=4, i=2649, j=5064, j-i=2415, einq
+len=4, i=2649, j=5179, j-i=2530, einq
+len=4, i=2649, j=5317, j-i=2668, einq
+len=4, i=2705, j=3418, j-i=713, xiqt
+len=4, i=2706, j=3419, j-i=713, iqtb
+len=4, i=2707, j=3420, j-i=713, qtbe
+len=4, i=2751, j=3510, j-i=759, utgk
+len=4, i=2782, j=4484, j-i=1702, kipe
+len=4, i=2844, j=5742, j-i=2898, syre
+len=4, i=2870, j=3031, j-i=161, tukn
+len=4, i=2870, j=3859, j-i=989, tukn
+len=4, i=2947, j=3890, j-i=943, tzzc
+len=4, i=2947, j=4695, j-i=1748, tzzc
+len=4, i=2947, j=4925, j-i=1978, tzzc
+len=4, i=3031, j=3859, j-i=828, tukn
+len=4, i=3061, j=5568, j-i=2507, qulo
+len=4, i=3168, j=3605, j-i=437, vusy
+len=4, i=3168, j=4042, j-i=874, vusy
+len=4, i=3194, j=3769, j-i=575, qesw
+len=4, i=3274, j=4217, j-i=943, bzgr
+len=4, i=3477, j=4351, j-i=874, einq
+len=4, i=3477, j=5064, j-i=1587, einq
+len=4, i=3477, j=5179, j-i=1702, einq
+len=4, i=3477, j=5317, j-i=1840, einq
+len=4, i=3531, j=4083, j-i=552, kjzk
+len=4, i=3605, j=4042, j-i=437, vusy
+len=4, i=3643, j=5414, j-i=1771, syej
+len=4, i=3643, j=5920, j-i=2277, syej
+len=4, i=3677, j=3884, j-i=207, lwac
+len=4, i=3710, j=4630, j-i=920, fdvd
+len=4, i=3711, j=4631, j-i=920, dvde
+len=4, i=3712, j=4632, j-i=920, vdeu
+len=4, i=3713, j=4633, j-i=920, deui
+len=4, i=3814, j=3929, j-i=115, jgvc
+len=4, i=3814, j=5231, j-i=1417, jgvc
+len=4, i=3890, j=4695, j-i=805, tzzc
+len=4, i=3890, j=4925, j-i=1035, tzzc
+len=4, i=3929, j=5231, j-i=1302, jgvc
+len=4, i=4013, j=5209, j-i=1196, nudo
+len=4, i=4351, j=5064, j-i=713, einq
+len=4, i=4351, j=5179, j-i=828, einq
+len=4, i=4351, j=5317, j-i=966, einq
+len=4, i=4540, j=4563, j-i=23, pwgw
+len=4, i=4541, j=4564, j-i=23, wgwq
+len=4, i=4695, j=4925, j-i=230, tzzc
+len=4, i=4817, j=5783, j-i=966, rkww
+len=4, i=4957, j=5440, j-i=483, dtfg
+len=4, i=5064, j=5179, j-i=115, einq
+len=4, i=5064, j=5317, j-i=253, einq
+len=4, i=5179, j=5317, j-i=138, einq
+len=4, i=5300, j=5507, j-i=207, jsue
+len=4, i=5414, j=5920, j-i=506, syej
+len=5, i=293, j=5836, j-i=5543, tpqke
+len=5, i=294, j=5837, j-i=5543, pqkez
+len=5, i=295, j=5838, j-i=5543, qkezf
+len=5, i=872, j=2988, j-i=2116, coiww
+len=5, i=873, j=2989, j-i=2116, oiwwz
+len=5, i=874, j=2990, j-i=2116, iwwzm
+len=5, i=880, j=3387, j-i=2507, qpjfj
+len=5, i=881, j=3388, j-i=2507, pjfjo
+len=5, i=882, j=3389, j-i=2507, jfjon
+len=5, i=883, j=3390, j-i=2507, fjonk
+len=5, i=1006, j=5215, j-i=4209, whzgv
+len=5, i=1007, j=5216, j-i=4209, hzgvd
+len=5, i=1013, j=5222, j-i=4209, fsyyj
+len=5, i=1707, j=5801, j-i=4094, mahkk
+len=5, i=1708, j=5802, j-i=4094, ahkky
+len=5, i=1709, j=5803, j-i=4094, hkkyf
+len=5, i=2080, j=3943, j-i=1863, ydomf
+len=5, i=2081, j=3944, j-i=1863, domfu
+len=5, i=2195, j=3115, j-i=920, vsouf
+len=5, i=2196, j=3116, j-i=920, souft
+len=5, i=2197, j=3117, j-i=920, ouftm
+len=5, i=2217, j=4540, j-i=2323, pwgwq
+len=5, i=2217, j=4563, j-i=2346, pwgwq
+len=5, i=2461, j=6003, j-i=3542, wppys
+len=5, i=2462, j=6004, j-i=3542, ppysy
+len=5, i=2463, j=6005, j-i=3542, pysyg
+len=5, i=2464, j=6006, j-i=3542, ysygk
+len=5, i=2465, j=6007, j-i=3542, sygkh
+len=5, i=2705, j=3418, j-i=713, xiqtb
+len=5, i=2706, j=3419, j-i=713, iqtbe
+len=5, i=3710, j=4630, j-i=920, fdvde
+len=5, i=3711, j=4631, j-i=920, dvdeu
+len=5, i=3712, j=4632, j-i=920, vdeui
+len=5, i=4540, j=4563, j-i=23, pwgwq
+len=6, i=293, j=5836, j-i=5543, tpqkez
+len=6, i=294, j=5837, j-i=5543, pqkezf
+len=6, i=872, j=2988, j-i=2116, coiwwz
+len=6, i=873, j=2989, j-i=2116, oiwwzm
+len=6, i=880, j=3387, j-i=2507, qpjfjo
+len=6, i=881, j=3388, j-i=2507, pjfjon
+len=6, i=882, j=3389, j-i=2507, jfjonk
+len=6, i=1006, j=5215, j-i=4209, whzgvd
+len=6, i=1707, j=5801, j-i=4094, mahkky
+len=6, i=1708, j=5802, j-i=4094, ahkkyf
+len=6, i=2080, j=3943, j-i=1863, ydomfu
+len=6, i=2195, j=3115, j-i=920, vsouft
+len=6, i=2196, j=3116, j-i=920, souftm
+len=6, i=2461, j=6003, j-i=3542, wppysy
+len=6, i=2462, j=6004, j-i=3542, ppysyg
+len=6, i=2463, j=6005, j-i=3542, pysygk
+len=6, i=2464, j=6006, j-i=3542, ysygkh
+len=6, i=2705, j=3418, j-i=713, xiqtbe
+len=6, i=3710, j=4630, j-i=920, fdvdeu
+len=6, i=3711, j=4631, j-i=920, dvdeui
+len=7, i=293, j=5836, j-i=5543, tpqkezf
+len=7, i=872, j=2988, j-i=2116, coiwwzm
+len=7, i=880, j=3387, j-i=2507, qpjfjon
+len=7, i=881, j=3388, j-i=2507, pjfjonk
+len=7, i=1707, j=5801, j-i=4094, mahkkyf
+len=7, i=2195, j=3115, j-i=920, vsouftm
+len=7, i=2461, j=6003, j-i=3542, wppysyg
+len=7, i=2462, j=6004, j-i=3542, ppysygk
+len=7, i=2463, j=6005, j-i=3542, pysygkh
+len=7, i=3710, j=4630, j-i=920, fdvdeui
+len=8, i=880, j=3387, j-i=2507, qpjfjonk
+len=8, i=2461, j=6003, j-i=3542, wppysygk
+len=8, i=2462, j=6004, j-i=3542, ppysygkh
+len=9, i=2461, j=6003, j-i=3542, wppysygkh
+len=10, no more matches
+
+Average Index of Coincidence
+============================
+L=4227
+f('a')=138
+f('b')=115
+f('c')=124
+f('d')=223
+f('e')=199
+f('f')=165
+f('g')=148
+f('h')=152
+f('i')=192
+f('j')=151
+f('k')=177
+f('l')=135
+f('m')=140
+f('n')=178
+f('o')=174
+f('p')=140
+f('q')=165
+f('r')=154
+f('s')=216
+f('t')=174
+f('u')=208
+f('v')=172
+f('w')=188
+f('x')=85
+f('y')=151
+f('z')=163
+IC=0.039635449
+t=1, E(IC)=0.0658
+t=2, E(IC)=0.052127535
+t=3, E(IC)=0.047570046
+t=4, E(IC)=0.045291302
+t=5, E(IC)=0.043924055
+t=6, E(IC)=0.043012558
+t=7, E(IC)=0.042361488
+t=8, E(IC)=0.041873186
+t=9, E(IC)=0.041493395
+
+Auto-correlation Method
+=======================
+t=1, count=144
+t=2, count=130
+t=3, count=118
+t=4, count=100
+t=5, count=130
+t=6, count=129
+t=7, count=124
+t=8, count=125
+t=9, count=104
+

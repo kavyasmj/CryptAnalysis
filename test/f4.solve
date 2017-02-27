@@ -1,0 +1,134 @@
+Kasiski Method
+==============
+len=4, i=129, j=2399, j-i=2270, thim
+len=4, i=283, j=3199, j-i=2916, myvh
+len=4, i=295, j=4183, j-i=3888, zfql
+len=4, i=296, j=4184, j-i=3888, fqlo
+len=4, i=297, j=4185, j-i=3888, qlok
+len=4, i=298, j=4186, j-i=3888, loky
+len=4, i=299, j=4187, j-i=3888, okyf
+len=4, i=300, j=4188, j-i=3888, kyfz
+len=4, i=339, j=2769, j-i=2430, yigh
+len=4, i=340, j=2770, j-i=2430, ighy
+len=4, i=341, j=2771, j-i=2430, ghyg
+len=4, i=342, j=2772, j-i=2430, hygu
+len=4, i=343, j=2773, j-i=2430, ygup
+len=4, i=344, j=2774, j-i=2430, gupq
+len=4, i=439, j=493, j-i=54, bkqh
+len=4, i=695, j=3071, j-i=2376, waij
+len=4, i=704, j=3620, j-i=2916, cmiw
+len=4, i=711, j=3141, j-i=2430, dbfr
+len=4, i=712, j=3142, j-i=2430, bfrk
+len=4, i=867, j=3729, j-i=2862, jcpv
+len=4, i=868, j=3730, j-i=2862, cpvn
+len=4, i=869, j=3731, j-i=2862, pvng
+len=4, i=870, j=3732, j-i=2862, vngg
+len=4, i=1174, j=1498, j-i=324, inzn
+len=4, i=1397, j=2052, j-i=655, eqqs
+len=4, i=1447, j=1609, j-i=162, fqym
+len=4, i=2555, j=2825, j-i=270, wunu
+len=4, i=2556, j=2826, j-i=270, unuq
+len=4, i=2557, j=2827, j-i=270, nuql
+len=4, i=2562, j=2832, j-i=270, yurq
+len=4, i=2563, j=2833, j-i=270, urqr
+len=4, i=2568, j=2838, j-i=270, buip
+len=4, i=2941, j=3155, j-i=214, svqf
+len=5, i=295, j=4183, j-i=3888, zfqlo
+len=5, i=296, j=4184, j-i=3888, fqlok
+len=5, i=297, j=4185, j-i=3888, qloky
+len=5, i=298, j=4186, j-i=3888, lokyf
+len=5, i=299, j=4187, j-i=3888, okyfz
+len=5, i=339, j=2769, j-i=2430, yighy
+len=5, i=340, j=2770, j-i=2430, ighyg
+len=5, i=341, j=2771, j-i=2430, ghygu
+len=5, i=342, j=2772, j-i=2430, hygup
+len=5, i=343, j=2773, j-i=2430, ygupq
+len=5, i=711, j=3141, j-i=2430, dbfrk
+len=5, i=867, j=3729, j-i=2862, jcpvn
+len=5, i=868, j=3730, j-i=2862, cpvng
+len=5, i=869, j=3731, j-i=2862, pvngg
+len=5, i=2555, j=2825, j-i=270, wunuq
+len=5, i=2556, j=2826, j-i=270, unuql
+len=5, i=2562, j=2832, j-i=270, yurqr
+len=6, i=295, j=4183, j-i=3888, zfqlok
+len=6, i=296, j=4184, j-i=3888, fqloky
+len=6, i=297, j=4185, j-i=3888, qlokyf
+len=6, i=298, j=4186, j-i=3888, lokyfz
+len=6, i=339, j=2769, j-i=2430, yighyg
+len=6, i=340, j=2770, j-i=2430, ighygu
+len=6, i=341, j=2771, j-i=2430, ghygup
+len=6, i=342, j=2772, j-i=2430, hygupq
+len=6, i=867, j=3729, j-i=2862, jcpvng
+len=6, i=868, j=3730, j-i=2862, cpvngg
+len=6, i=2555, j=2825, j-i=270, wunuql
+len=7, i=295, j=4183, j-i=3888, zfqloky
+len=7, i=296, j=4184, j-i=3888, fqlokyf
+len=7, i=297, j=4185, j-i=3888, qlokyfz
+len=7, i=339, j=2769, j-i=2430, yighygu
+len=7, i=340, j=2770, j-i=2430, ighygup
+len=7, i=341, j=2771, j-i=2430, ghygupq
+len=7, i=867, j=3729, j-i=2862, jcpvngg
+len=8, i=295, j=4183, j-i=3888, zfqlokyf
+len=8, i=296, j=4184, j-i=3888, fqlokyfz
+len=8, i=339, j=2769, j-i=2430, yighygup
+len=8, i=340, j=2770, j-i=2430, ighygupq
+len=9, i=295, j=4183, j-i=3888, zfqlokyfz
+len=9, i=339, j=2769, j-i=2430, yighygupq
+len=10, no more matches
+
+Average Index of Coincidence
+============================
+L=3277
+f('a')=111
+f('b')=123
+f('c')=100
+f('d')=97
+f('e')=117
+f('f')=152
+f('g')=143
+f('h')=116
+f('i')=135
+f('j')=149
+f('k')=127
+f('l')=84
+f('m')=119
+f('n')=102
+f('o')=142
+f('p')=125
+f('q')=149
+f('r')=136
+f('s')=141
+f('t')=114
+f('u')=124
+f('v')=132
+f('w')=124
+f('x')=147
+f('y')=133
+f('z')=135
+IC=0.038891516
+t=1, E(IC)=0.0658
+t=2, E(IC)=0.052126597
+t=3, E(IC)=0.047568796
+t=4, E(IC)=0.045289895
+t=5, E(IC)=0.043922555
+t=6, E(IC)=0.043010994
+t=7, E(IC)=0.04235988
+t=8, E(IC)=0.041871544
+t=9, E(IC)=0.041491727
+t=10, E(IC)=0.041187874
+t=11, E(IC)=0.040939267
+
+Auto-correlation Method
+=======================
+t=1, count=108
+t=2, count=92
+t=3, count=87
+t=4, count=95
+t=5, count=96
+t=6, count=113
+t=7, count=101
+t=8, count=107
+t=9, count=91
+t=10, count=79
+t=11, count=85
+

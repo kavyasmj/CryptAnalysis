@@ -1,0 +1,186 @@
+Kasiski Method
+==============
+len=4, i=256, j=357, j-i=101, bios
+len=4, i=480, j=2721, j-i=2241, nqrt
+len=4, i=609, j=1518, j-i=909, evia
+len=4, i=610, j=1519, j-i=909, viaz
+len=4, i=611, j=1520, j-i=909, iazi
+len=4, i=612, j=1521, j-i=909, azir
+len=4, i=613, j=1522, j-i=909, zirj
+len=4, i=614, j=1523, j-i=909, irjr
+len=4, i=688, j=2011, j-i=1323, lbls
+len=4, i=957, j=2775, j-i=1818, yhgm
+len=4, i=958, j=2776, j-i=1818, hgmg
+len=4, i=959, j=2777, j-i=1818, gmgg
+len=4, i=1011, j=1903, j-i=892, qwsi
+len=4, i=1067, j=2986, j-i=1919, wxms
+len=4, i=1068, j=2987, j-i=1919, xmsn
+len=4, i=1069, j=2988, j-i=1919, msns
+len=4, i=1070, j=2989, j-i=1919, snsw
+len=4, i=1117, j=2733, j-i=1616, appp
+len=4, i=1118, j=2734, j-i=1616, pppk
+len=4, i=1119, j=2735, j-i=1616, ppkq
+len=4, i=1120, j=2736, j-i=1616, pkqv
+len=4, i=1228, j=2541, j-i=1313, lfte
+len=4, i=1229, j=2542, j-i=1313, fteu
+len=4, i=1229, j=3047, j-i=1818, fteu
+len=4, i=1669, j=3083, j-i=1414, hfwf
+len=4, i=1670, j=3084, j-i=1414, fwfo
+len=4, i=1671, j=3085, j-i=1414, wfoe
+len=4, i=1672, j=1778, j-i=106, foeb
+len=4, i=1708, j=2920, j-i=1212, wnuk
+len=4, i=1709, j=2921, j-i=1212, nuki
+len=4, i=1710, j=2922, j-i=1212, ukic
+len=4, i=1711, j=2923, j-i=1212, kice
+len=4, i=1712, j=2924, j-i=1212, icer
+len=4, i=1713, j=2925, j-i=1212, cerj
+len=4, i=1725, j=3077, j-i=1352, dmhv
+len=4, i=1736, j=1837, j-i=101, myae
+len=4, i=1737, j=1838, j-i=101, yaeg
+len=4, i=1738, j=1839, j-i=101, aegk
+len=4, i=1739, j=1840, j-i=101, egkw
+len=4, i=1740, j=1841, j-i=101, gkws
+len=4, i=2542, j=3047, j-i=505, fteu
+len=4, i=2805, j=2906, j-i=101, snrv
+len=4, i=2806, j=2907, j-i=101, nrvh
+len=4, i=2807, j=2908, j-i=101, rvhs
+len=4, i=2808, j=2909, j-i=101, vhsp
+len=4, i=2856, j=2957, j-i=101, foqr
+len=4, i=2857, j=2958, j-i=101, oqrz
+len=4, i=2858, j=2959, j-i=101, qrzi
+len=5, i=609, j=1518, j-i=909, eviaz
+len=5, i=610, j=1519, j-i=909, viazi
+len=5, i=611, j=1520, j-i=909, iazir
+len=5, i=612, j=1521, j-i=909, azirj
+len=5, i=613, j=1522, j-i=909, zirjr
+len=5, i=957, j=2775, j-i=1818, yhgmg
+len=5, i=958, j=2776, j-i=1818, hgmgg
+len=5, i=1067, j=2986, j-i=1919, wxmsn
+len=5, i=1068, j=2987, j-i=1919, xmsns
+len=5, i=1069, j=2988, j-i=1919, msnsw
+len=5, i=1117, j=2733, j-i=1616, apppk
+len=5, i=1118, j=2734, j-i=1616, pppkq
+len=5, i=1119, j=2735, j-i=1616, ppkqv
+len=5, i=1228, j=2541, j-i=1313, lfteu
+len=5, i=1669, j=3083, j-i=1414, hfwfo
+len=5, i=1670, j=3084, j-i=1414, fwfoe
+len=5, i=1708, j=2920, j-i=1212, wnuki
+len=5, i=1709, j=2921, j-i=1212, nukic
+len=5, i=1710, j=2922, j-i=1212, ukice
+len=5, i=1711, j=2923, j-i=1212, kicer
+len=5, i=1712, j=2924, j-i=1212, icerj
+len=5, i=1736, j=1837, j-i=101, myaeg
+len=5, i=1737, j=1838, j-i=101, yaegk
+len=5, i=1738, j=1839, j-i=101, aegkw
+len=5, i=1739, j=1840, j-i=101, egkws
+len=5, i=2805, j=2906, j-i=101, snrvh
+len=5, i=2806, j=2907, j-i=101, nrvhs
+len=5, i=2807, j=2908, j-i=101, rvhsp
+len=5, i=2856, j=2957, j-i=101, foqrz
+len=5, i=2857, j=2958, j-i=101, oqrzi
+len=6, i=609, j=1518, j-i=909, eviazi
+len=6, i=610, j=1519, j-i=909, viazir
+len=6, i=611, j=1520, j-i=909, iazirj
+len=6, i=612, j=1521, j-i=909, azirjr
+len=6, i=957, j=2775, j-i=1818, yhgmgg
+len=6, i=1067, j=2986, j-i=1919, wxmsns
+len=6, i=1068, j=2987, j-i=1919, xmsnsw
+len=6, i=1117, j=2733, j-i=1616, apppkq
+len=6, i=1118, j=2734, j-i=1616, pppkqv
+len=6, i=1669, j=3083, j-i=1414, hfwfoe
+len=6, i=1708, j=2920, j-i=1212, wnukic
+len=6, i=1709, j=2921, j-i=1212, nukice
+len=6, i=1710, j=2922, j-i=1212, ukicer
+len=6, i=1711, j=2923, j-i=1212, kicerj
+len=6, i=1736, j=1837, j-i=101, myaegk
+len=6, i=1737, j=1838, j-i=101, yaegkw
+len=6, i=1738, j=1839, j-i=101, aegkws
+len=6, i=2805, j=2906, j-i=101, snrvhs
+len=6, i=2806, j=2907, j-i=101, nrvhsp
+len=6, i=2856, j=2957, j-i=101, foqrzi
+len=7, i=609, j=1518, j-i=909, eviazir
+len=7, i=610, j=1519, j-i=909, viazirj
+len=7, i=611, j=1520, j-i=909, iazirjr
+len=7, i=1067, j=2986, j-i=1919, wxmsnsw
+len=7, i=1117, j=2733, j-i=1616, apppkqv
+len=7, i=1708, j=2920, j-i=1212, wnukice
+len=7, i=1709, j=2921, j-i=1212, nukicer
+len=7, i=1710, j=2922, j-i=1212, ukicerj
+len=7, i=1736, j=1837, j-i=101, myaegkw
+len=7, i=1737, j=1838, j-i=101, yaegkws
+len=7, i=2805, j=2906, j-i=101, snrvhsp
+len=8, i=609, j=1518, j-i=909, eviazirj
+len=8, i=610, j=1519, j-i=909, viazirjr
+len=8, i=1708, j=2920, j-i=1212, wnukicer
+len=8, i=1709, j=2921, j-i=1212, nukicerj
+len=8, i=1736, j=1837, j-i=101, myaegkws
+len=9, i=609, j=1518, j-i=909, eviazirjr
+len=9, i=1708, j=2920, j-i=1212, wnukicerj
+len=10, no more matches
+
+Average Index of Coincidence
+============================
+L=2753
+f('a')=111
+f('b')=84
+f('c')=118
+f('d')=89
+f('e')=114
+f('f')=100
+f('g')=108
+f('h')=126
+f('i')=125
+f('j')=104
+f('k')=121
+f('l')=95
+f('m')=88
+f('n')=121
+f('o')=104
+f('p')=104
+f('q')=106
+f('r')=110
+f('s')=103
+f('t')=112
+f('u')=112
+f('v')=97
+f('w')=127
+f('x')=88
+f('y')=95
+f('z')=91
+IC=0.038640458
+t=1, E(IC)=0.0658
+t=2, E(IC)=0.052125802
+t=3, E(IC)=0.047567736
+t=4, E(IC)=0.045288703
+t=5, E(IC)=0.043921284
+t=6, E(IC)=0.04300967
+t=7, E(IC)=0.042358518
+t=8, E(IC)=0.041870154
+t=9, E(IC)=0.041490315
+t=10, E(IC)=0.041186444
+t=11, E(IC)=0.040937822
+t=12, E(IC)=0.040730637
+t=13, E(IC)=0.040555327
+t=14, E(IC)=0.040405061
+t=15, E(IC)=0.040274831
+t=16, E(IC)=0.040160879
+
+Auto-correlation Method
+=======================
+t=1, count=101
+t=2, count=109
+t=3, count=96
+t=4, count=93
+t=5, count=91
+t=6, count=80
+t=7, count=80
+t=8, count=80
+t=9, count=97
+t=10, count=99
+t=11, count=77
+t=12, count=88
+t=13, count=99
+t=14, count=101
+t=15, count=68
+t=16, count=88
+

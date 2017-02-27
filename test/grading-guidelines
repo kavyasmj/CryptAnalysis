@@ -1,0 +1,307 @@
+Grading Guideline for HW3
+=========================
+
+Total points: 100
+
++---------------------+
+| General Guidelines: |
++---------------------+
+
+1) The points below are maximum points.  Partial credits may be given.
+
+2) Do the "plus points" first, then do the "minus points".
+
+3) Please read the student's README first to see if you need to do something
+   different to get their code to work and what the known problems are.
+
+4) The scripts below are for csh/tcsh.  If you use bash, please modify
+   them where necessary.  Or, you can do "tcsh" and then run the scripts.
+
+5) The grading is meant to be harsh!  So, if running the "diff" command
+   suppose to produce no output, but the student's code produces some
+   output, take points off accordingly.  Similarly, if running the "diff"
+   command suppose to produce some output, but the student's code
+   produces no output, take points off accordingly. The only values that 
+   are allowed to be different are the "real values".
+
+6) The posted grading guidelines is not perfect.  We will try our best to
+   stick to the grading guidelines.  Sometimes, after we started grading
+   some of the submissions, we realize that we missed something (most often
+   in "minus points").  The bottomline is that we reserve the right to add
+   or change things in the grading guidelines as we see fit.
+
++--------------+
+| Plus points: |
++--------------+
+ 
+set len1=11
+set len2=7
+set len3=23
+set len4=54
+set len5=101
+
+set pph1="apple"
+set pph2="facebook"
+set pph3="google"
+set pph4="microsoft"
+set pph5="twitter"
+
+(A) keygen (+20 points, +4 for each correct answer)
+		set srcdir=~csci531/public/cs531/hw3
+		/bin/rm -f f?.keys
+
+		./hw3 keygen -p=$pph1 -t=$len1 > f1.keys
+		./hw3 keygen -p=$pph2 -t=$len2 > f2.keys
+		./hw3 keygen -p=$pph3 -t=$len3 > f3.keys
+		./hw3 keygen -p=$pph4 -t=$len4 > f4.keys
+		./hw3 keygen -p=$pph5 -t=$len5 > f5.keys
+
+		foreach f (1 2 3 4 5)
+			echo "==> $srcdir/f$f.keys"
+                        diff f$f.keys $srcdir/f$f.keys
+		end
+
+(B) invkey (+10 points, +2 points for each correct case)
+
+		set srcdir=~csci531/public/cs531/hw3
+		/bin/rm -f f?.invkeys
+		foreach f (1 2 3 4 5)
+			./hw3 invkey $srcdir/f$f.keys > f$f.invkeys
+			echo "==> $srcdir/f$f.invkeys"
+			diff f$f.invkeys $srcdir/f$f.invkeys
+		end
+
+(C) crypt/decrypt (+20 points)
+
+	1. crypt (+10 points, +2 for each correct answer)
+                set srcdir=~csci531/public/cs531/hw3
+                /bin/rm -f f?.ct
+                foreach f (1 2 3 4 5)
+                        ./hw3 crypt -k=$srcdir/f$f.keys $srcdir/f$f.pt > f$f.ct
+                        echo "==> $srcdir/f$f.ct"
+                        diff f$f.ct $srcdir/f$f.ct
+                end
+
+	2. decrypt (+10 points, +2 for each correct answer)
+                set srcdir=~csci531/public/cs531/hw3
+                /bin/rm -f f?.pt
+                foreach f (1 2 3 4 5)
+                        cat $srcdir/f$f.ct | ./hw3 crypt -k=$srcdir/f$f.invkeys > f$f.pt
+                        echo "==> $srcdir/f$f.pt"
+                        diff f$f.pt $srcdir/f$f.pt
+                end
+
+(D) keygen, invkey, crypt, then decrypt using only student's data (+10 points, +2 for each correct answer)
+
+                set srcdir=~csci531/public/cs531/hw3
+		/bin/rm -f f?.pt f?.ct f?.keys f?.invkeys
+
+		./hw3 keygen -p=$pph1 -t=3 > f1.keys
+		./hw3 keygen -p=$pph2 -t=7 > f2.keys
+		./hw3 keygen -p=$pph3 -t=8 > f3.keys
+		./hw3 keygen -p=$pph4 -t=2 > f4.keys
+		./hw3 keygen -p=$pph5 -t=4 > f5.keys
+
+                foreach f (1 2 3 4 5)
+			./hw3 invkey f$f.keys > f$f.invkeys
+                        cat $srcdir/f$f.pt | ./hw3 crypt -k=f$f.keys > f$f.ct
+                        ./hw3 crypt -k=f$f.invkeys f$f.ct > f$f.pt
+                        echo "==> $srcdir/f$f.pt"
+                        diff f$f.pt $srcdir/f$f.pt
+                end
+
+(E) histo (+20 points, +2 for each correct answer)
+
+        set srcdir=~csci531/public/cs531/hw3
+        /bin/rm -f f?.histo.?
+
+        ./hw3 histo -t=5 -i=1 $srcdir/f1.ct > f1.histo.1
+        ./hw3 histo -t=6 -i=3 $srcdir/f2.ct > f2.histo.1
+        ./hw3 histo -t=3 -i=3 $srcdir/f3.ct > f3.histo.1
+        ./hw3 histo -t=4 -i=2 $srcdir/f4.ct > f4.histo.1
+        ./hw3 histo -t=7 -i=2 $srcdir/f5.ct > f5.histo.1
+
+        cat $srcdir/f1.ct | ./hw3 histo -t=7 -i=7 > f1.histo.2
+        cat $srcdir/f2.ct | ./hw3 histo -t=8 -i=5 > f2.histo.2
+        cat $srcdir/f3.ct | ./hw3 histo -t=4 -i=4 > f3.histo.2
+        cat $srcdir/f4.ct | ./hw3 histo -t=5 -i=3 > f4.histo.2
+        cat $srcdir/f5.ct | ./hw3 histo -t=6 -i=1 > f5.histo.2
+
+	foreach f (1 2 3 4 5)
+		foreach x (1 2)
+			echo "==> $srcdir/f$f.histo.$x "
+			diff $srcdir/f$f.histo.$x f$f.histo.$x
+		end
+	end
+
+(F) solve (+20 points, +4 for each correct answer, +2 for Kasiski, +1 for each IC method)
+
+	Note: For the floating values (IC and E(IC) in f?.solve, the numbers
+              do not have to match exactly; they just have to be close
+              (i.e., first 5 significant digits must be the same, after
+              rounding to first 5 significant digits).
+
+        set srcdir=~csci531/public/cs531/hw3
+        /bin/rm -f f?.solve
+
+        ./hw3 solve -l=17 $srcdir/f1.ct > f1.solve
+        ./hw3 solve -l=20 $srcdir/f2.ct > f2.solve
+        ./hw3 solve -l=9  $srcdir/f3.ct > f3.solve
+        ./hw3 solve -l=11 $srcdir/f4.ct > f4.solve
+        ./hw3 solve -l=16 $srcdir/f5.ct > f5.solve
+
+        foreach f (1 2 3 4 5)
+                echo "==> $srcdir/f$f.solve"
+                diff f$f.solve $srcdir/f$f.solve
+        end
+
+
+(G) mystery (+10 points extra credit)
+
+	If no documentation information is provided for this in the README file,
+        skip this section and no extra credit
+
+	Check student's README file for details for (1) and (2) below.
+	Please note that if student's "hw3 solve ..." command is not working
+        properly, you will receive no credit for (1) and (2) below.
+
+	Run the following commands.  For the floating values (IC and E(IC)
+        in m?.solve, the numbers do not have to match exactly; they just
+        have to be close (i.e., first 5 significant digits must be the same,
+        after rounding to first 5 significant digits).
+
+            set srcdir=~csci531/public/cs531/hw3
+            /bin/rm -f f?.solve
+
+            ./hw3 solve -l=50 $srcdir/mystery1.ct > m1.solve
+            echo "==> $srcdir/m1.solve"
+            diff m1.solve $srcdir/m1.solve
+            ./hw3 solve -l=50 $srcdir/mystery2.ct > m2.solve
+            echo "==> $srcdir/m2.solve"
+            diff m2.solve $srcdir/m2.solve
+
+        If m1.solve is too different from the solution, no extra credit for mystery1.
+        Otherwise, look for analysis in README regarding how the student figured out
+            what the correct period should be for mystery1.  If no such analysis, no
+            extra credit for mystery1.
+        If the correct period is mentioned for mystery1 in the README file, +1 point.
+
+            (currently, $srcdir/mystery1.pt is not available)
+            Let mystery1.invkeys be the submitted decryption key file for mystery1.ct
+            Do:
+                        /bin/rm -f 1.pt
+                        ./hw3 crypt -k=mystery1.invkeys $srcdir/mystery1.ct > 1.pt
+                        echo "==> $srcdir/mystery1.pt"
+                        diff 1.pt $srcdir/mystery1.pt
+                        /bin/rm -f 1.pt
+
+            If "diff" command produced no output, +4 points.
+
+        If m2.solve is too different from the solution, no extra credit for mystery2.
+        Otherwise, look for analysis in README regarding how the student figured out
+            what the correct period should be for mystery2.  If no such analysis, no
+            extra credit for mystery2.
+        If the correct period is mentioned for mystery2 in the README file, +1 point.
+
+            (currently, $srcdir/mystery2.pt is not available)
+            Let mystery2.invkeys be the submitted decryption key file for mystery2.ct
+            Do:
+                        /bin/rm -f 2.pt
+                        ./hw3 crypt -k=mystery2.invkeys $srcdir/mystery2.ct > 2.pt
+                        echo "==> $srcdir/mystery2.pt"
+                        diff 2.pt $srcdir/mystery2.pt
+                        /bin/rm -f 2.pt
+
+            If "diff" command produced no output, +4 points.
+
+
++---------------+
+| Minus points: |
++---------------+
+
+Improper citation   : -5 points
+                      for code obtained from a public source, the right place
+                          to cite the source is right next to the code
+
+Cannot compile      : -5 to -10, depending on effort to make it work
+                      if cannot generate executable, at least 5 points
+                          will be taken off, up to 10 points off if it
+                          takes a lot to make it work
+
+Compiler warnings   : -1 to -3
+                      if using gcc/g++, make sure -Wall flag is used
+                      please take 1 point off for 1-4 warnings,
+                      2 points off for 5-8 warnings, 3 points for more
+
+"make clean"        : -2 point if it does not work correctly
+
+Segmentation faults : -10 points
+                if you see a seg fault (or bus error) any time during your
+                    testing of the code, if it's fairly repeatable, deduct 10
+                    points, if it's intermittent, deduct less, depending on
+                    how often you see the seg fault
+
+Separate compilation : -10 points
+                if the executable is compiled with a single line, deduct
+                    all 10 points
+                if the executable is a single module, but generates hw1.o and
+                    then link to create the executable in line one, deduct 5
+                    points
+                if most of the code are in .h files, deduct all 10 points
+
+Malformed input : -2 point each for each not handling properly (should print
+                    a reasonable error message and quit, just saying that
+                    there's something wrong with the input is not reasonable,
+                    you must give a line number and a brief reason if applicable)
+                set srcdir=~csci531/public/cs531/hw3
+
+                ./hw3 crypt -k=$srcdir/f101.keys $srcdir/f1.pt
+                ./hw3 crypt -k=$srcdir/f102.keys $srcdir/f2.pt
+                ./hw3 crypt -k=$srcdir/f103.keys $srcdir/f3.pt
+                ./hw3 crypt -k=$srcdir/f104.keys $srcdir/f4.pt
+                ./hw3 crypt -k=$srcdir/f105.keys $srcdir/f5.pt
+
+Too slow : -10 points
+                -2 points for each run that takes more than 5 minutes to complete
+
+Bad commandline : -1 point each for each not handling properly
+                # need some sort of error output to indicate that the command
+                #     cannot be completed, it does not have to exactly the
+                #     error indicated below, just something reasonable to inform
+                #     the user about the error condition
+                # please note that commandline parsing is separate from
+                #     other functionalities, so even though a student has
+                #     declared that certain part of the assignments is not
+                #     imlemented, commandling parsing still needs to be done
+                #     for those commands
+                ./hw3
+                    (malformed command)
+                ./hw3 stream -out=foo 
+                    (malformed command)
+                ./hw3 keygen -x="passphrase"
+                    (malformed command)
+                ./hw3 keygen -t=
+                    (malformed command)
+                ./hw3 crypt
+                    (malformed command)
+                ./hw3 crypt -k=/home/scf-08/csci570b/.login
+                    (cannot open key file)
+                ./hw3 crypt -k=/etc/passwd
+                    (malformed key file)
+                ./hw3 invkey /etc/passwd
+                    (malformed key file)
+                ./hw3 histo -t= -i=5
+                    (malformed command)
+                ./hw3 histo -t=8 -j=
+                    (malformed command)
+                ./hw3 solve -l=5 /usr/bin/xyzz
+                    (input file /usr/bin/xyzz does not exist)
+                ./hw3 solve -l= /etc/passwd
+                    (malformed command)
+
+Improper citation : -20 points
+                #
+                # this is only for the case that MOSS has found matched code
+                # and the studet did not cite downloaded/copied code properly
+                #
+
